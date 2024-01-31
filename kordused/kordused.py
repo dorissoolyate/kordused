@@ -1,6 +1,6 @@
 #1
 while True:
-    n = input("skolko zajcev (ot 1 do 9): ")
+    n=input("skolko zajcev (ot 1 do 9): ")
     if n.isdigit() and 1 <= int(n) <= 9:
         n = int(n)
         break
@@ -14,11 +14,17 @@ for i in range(n):
         print()
         
 #2
-L = int(input("vvedi 4islo L: "))
-summa=0
-for i in range(L+1):
-    summa+=i
-print(f"summa ot 0 do {L}: {summa}")
+while True:
+    try:
+        L = int(input("vvedi chislo L: "))
+        if L>=0:
+            break 
+        else:
+            print("bez -")
+    except ValueError:
+        print("celoe chislo")
+sum_rezultat=sum(range(L+1))
+print(f"summa ot 0 do 9 {L} {sum_rezultat}")
 
 #3
 import  random
